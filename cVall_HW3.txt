@@ -1,0 +1,65 @@
+2)	
+	a.
+	N	Stepsize	Eulor sol	Error		Ratio
+	10	0.3		-3.0355		0.0119		
+	20	0.15		-3.0415		0.0059		2.0169
+	40	0.075		-3.0445		0.0029		2.0345
+	80	0.0375		-3.0460		0.0015		1.9333
+	160	0.01875		-3.0467		7.2588e-04	2.0665
+	320	0.009375	-3.0471		3.6262e-04	2.0018
+
+	b. jpeg is in HW3 folder. 
+	
+	c. 
+	N	Stepsize	Eulor sol	Error		Ratio
+	10	0.3		-4.0000		2.6645e-15
+	20	0.15		-4.0000		5.7732e-15	0.4615
+	40	0.075		-4.0000		1.2434e-14	0.4643
+	80	0.0375		-4.0000		7.9936e-15	1.5555
+	160	0.01875		-4.0000		3.9080e-14	0.2045
+	320	0.009375	-4.0000		2.8422e-14	1.3750
+
+	d. 
+	The ratio in part a is larger (and mroe consistent) than the rations in part c. However, 
+	the errors in part c are smaller than those in part a, significantly smaller. The rate 
+	of convergence is consistent in part a, and is more desirable. 
+
+3)
+	a. When the difference is less than .000001, the population is about 19.7474, so rounded, 
+	the eventual population level reached from the initial population of 2.44 is 20. 
+	
+	b. When the difference is less than .000001, the population is about 19.7474, so rounded
+	the eventual population level reached from the initial population of 2.40 is about 20. 
+	It is good that a very small change in the beginning population means a small change in
+	the eventual population. 
+	
+	c. The plots of the population in parts (a) and (b) are very similar. The plot in (b) starts
+	at a slightly smaller number than (a), but the population in (b) reaches a higher value
+	quicker than the population in (a). In the end they both level out around 20. 
+
+	c(ExtraCredit). For the extra credit, we made r very small. The variable r influences the first
+	term on the right hand side. That term is based off of small population levels. In (a) the population 
+	does not start gorwing immediately, and ends up reaching a population around 17. 
+
+4) So we are given y'(t) = (3/2)*(y^(1/3)), y(0)=0
+	dy/dt = (3/2)*(y^(1/3))
+	(y^(-1/3))dy = (3/2)dt
+	Integrate Both Sides
+	(3/2)*(y^(2/3)) = (3/2)t+C (C is a constant)
+	y^(2/3) = t+c
+	We know y(0)=0, therefore C=0
+	y^(2/3)=t
+	y = t^(3/2). This is the solution to the given IVP. 
+
+	Apply One Step Eulors Method:
+	y1 = y0+h*(3/2)*(0)^(1/3) = 0
+	y2 = y1+h*(3/2)*(0)^(1/3) = 0
+	y3 = -------------------- = 0
+	y4 = -------------------- = 0
+
+	We can se that Eulors method is not a good method for the given IVP. For this problem, Eulor's method
+	does not show any convergence, and gives us 0 for every value. This is why the numerical method gives 
+	us a different answer from Eulor's method.
+	
+
+	
